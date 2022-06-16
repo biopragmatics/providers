@@ -2,18 +2,45 @@
 
 from pathlib import Path
 
-from pyobo.sources import UniProtPtmGetter
+import bioregistry
+from pyobo.sources import ontology_resolver
 from pyobo.ssg import make_site
+import click
 
 HERE = Path(__file__).parent.resolve()
 
 
+@click.command()
 def main():
-    for cls in [
-        UniProtPtmGetter,
-    ]:
-        obo = cls()
-        make_site(obo, HERE.joinpath(obo.ontology))
+    """Generate static sites for resources with none."""
+    ontologies = []
+    for cls in ontology_resolver:
+        uri_format = bioregistry.get_uri_format(cls.ontology)
+        if uri_format is None or "biopragmatics.github.io" in uri_format:
+            obo = cls()
+            make_site(obo, HERE.joinpath(obo.ontology))
+            ontologies.append(obo)
+
+    link_list = "\n".join(
+        f"- [{bioregistry.get_name(obo.ontology)} (`{obo.ontology}`)](/{obo.ontology})"
+        for obo in ontologies
+    )
+    HERE.joinpath("README.md").write_text(f"""\
+# Biopragmatics Sites
+
+This repository contains static sites generated for resources
+that do not have their own providers, but are implemented in PyOBO.
+
+{link_list}
+
+## Update
+
+The sites can be updated with the following:
+
+```shell
+$ pip install tox
+$ tox
+""")
 
 
 if __name__ == '__main__':
