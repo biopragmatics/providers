@@ -1,89 +1,437 @@
 <!DOCTYPE html>
-<html>
-<head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <!-- Bootstrap -->
-            <link
-                    rel="stylesheet"
-                    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-                    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-                    crossorigin="anonymous"
-            />
-            <link
-                    rel="stylesheet"
-                    href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.12/c3.min.css"
-            />
-            <link
-                    rel="stylesheet"
-                    href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
-            />
-            <!-- DataTables, see: https://datatables.net/examples/styling/bootstrap4.html-->
-            <link
-                    rel="stylesheet"
-                    href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"
-            />
-            <style type="text/css">
-                h2 {
-                    margin-top: 35px;
-                }
+<html lang="en">
+<head>        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.12/c3.min.css"/>
+    <style>
+        h2 {
+            margin-top: 35px;
+        }
 
-                html, body {
-                    height: 100%;
-                }
+        html, body {
+            height: 100%;
+        }
 
-                body {
-                    display: flex;
-                    flex-flow: column;
-                }
+        body {
+            display: flex;
+            flex-flow: column;
+        }
 
-                .footer {
-                    margin-top: auto;
-                    padding-top: 1em;
-                    background-color: #f5f5f5;
-                }
+        .footer {
+            margin-top: auto;
+            padding-top: 1em;
+            background-color: #f5f5f5;
+        }
+    </style>    <title>NPM1_TARGET_GENES</title></head>
 
-                nav[data-toggle="toc"] {
-                    top: 42px;
-                }
-            </style>
-
-        <script src="https://kit.fontawesome.com/4c86883252.js" crossorigin="anonymous"></script>
-        <title>NPM1_TARGET_GENES</title>
-</head>
-
-<body data-spy="scroll" data-target="#toc">
+<body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <span class="navbar-brand">
         Molecular Signatures Database
     </span>
 </nav>
 
-
-    <div class="container" style="margin-top: 50px; margin-bottom: 50px">
-        <div class="card">
+<div class="container" style="margin-top: 50px; margin-bottom: 50px">
+<div class="card">
         <div class="card-header">
             NPM1_TARGET_GENES
         </div>
         <div class="card-body">
-            
                 <p>Genes containing one or more binding sites for UniProt:P06748 (NPM1) in their promoter regions (TSS -1000,+100 bp) as identified by GTRD version 20.06 ChIP-seq harmonization.</p>
-            
             <dl>
-                <dt>Identifier</dt>
-                <dd><a href="https://bioregistry.io/msigdb:M34465">M34465</a></dd>
-                
+                <dt>Local Unique Identifier</dt>
+                <dd><a href="https://bioregistry.io/msigdb:M34465">M34465</a>
+                </dd>
+                    <dt>
+                        <span class="badge badge-primary">Relation</span>
+                            in taxon (<code>RO:0002162</code>)
+                    </dt>
+                    <dt>
+                        <ol>
+                                <li><a href="https://bioregistry.io/NCBITaxon:9606">NCBITaxon:9606</a></li>
+                        </ol>
+                    </dt>
+                    <dt>
+                        <span class="badge badge-primary">Relation</span>
+                            has part (<code>BFO:0000051</code>)
+                    </dt>
+                    <dt>
+                        <ol>
+                                <li><a href="https://bioregistry.io/ncbigene:57147">ncbigene:57147</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:4074">ncbigene:4074</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:26073">ncbigene:26073</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:23028">ncbigene:23028</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:23077">ncbigene:23077</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:3475">ncbigene:3475</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:29116">ncbigene:29116</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:6224">ncbigene:6224</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:2067">ncbigene:2067</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:9519">ncbigene:9519</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:54480">ncbigene:54480</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:26009">ncbigene:26009</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:23338">ncbigene:23338</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:10721">ncbigene:10721</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:4659">ncbigene:4659</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:56848">ncbigene:56848</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:6141">ncbigene:6141</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:4904">ncbigene:4904</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:30834">ncbigene:30834</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:80347">ncbigene:80347</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:4205">ncbigene:4205</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:57560">ncbigene:57560</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:9948">ncbigene:9948</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:6929">ncbigene:6929</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:4775">ncbigene:4775</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:54475">ncbigene:54475</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:23332">ncbigene:23332</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:55421">ncbigene:55421</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:54962">ncbigene:54962</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:9138">ncbigene:9138</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:3205">ncbigene:3205</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:5108">ncbigene:5108</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:9984">ncbigene:9984</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:57092">ncbigene:57092</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:11266">ncbigene:11266</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:55100">ncbigene:55100</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:54700">ncbigene:54700</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:4528">ncbigene:4528</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:10075">ncbigene:10075</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:8602">ncbigene:8602</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:51290">ncbigene:51290</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:23186">ncbigene:23186</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:51650">ncbigene:51650</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:51726">ncbigene:51726</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:10013">ncbigene:10013</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:3189">ncbigene:3189</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:4713">ncbigene:4713</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:26088">ncbigene:26088</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:56993">ncbigene:56993</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:1983">ncbigene:1983</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:11083">ncbigene:11083</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:994">ncbigene:994</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:3420">ncbigene:3420</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:2010">ncbigene:2010</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:23361">ncbigene:23361</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:80152">ncbigene:80152</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:8312">ncbigene:8312</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:64428">ncbigene:64428</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:10273">ncbigene:10273</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:9093">ncbigene:9093</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:79848">ncbigene:79848</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:7264">ncbigene:7264</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:203069">ncbigene:203069</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:665">ncbigene:665</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:11100">ncbigene:11100</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:6223">ncbigene:6223</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:6320">ncbigene:6320</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:30000">ncbigene:30000</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:64598">ncbigene:64598</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:55744">ncbigene:55744</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:10488">ncbigene:10488</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:79004">ncbigene:79004</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:23232">ncbigene:23232</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:26001">ncbigene:26001</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:8402">ncbigene:8402</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:10743">ncbigene:10743</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:1655">ncbigene:1655</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:81539">ncbigene:81539</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:1432">ncbigene:1432</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:705">ncbigene:705</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:1347">ncbigene:1347</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:5810">ncbigene:5810</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:55299">ncbigene:55299</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:9631">ncbigene:9631</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:10051">ncbigene:10051</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:55171">ncbigene:55171</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:6787">ncbigene:6787</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:3069">ncbigene:3069</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:7341">ncbigene:7341</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:23341">ncbigene:23341</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:27101">ncbigene:27101</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:9887">ncbigene:9887</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:23169">ncbigene:23169</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:6738">ncbigene:6738</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:51377">ncbigene:51377</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:54936">ncbigene:54936</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:23271">ncbigene:23271</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:23314">ncbigene:23314</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:56252">ncbigene:56252</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:5826">ncbigene:5826</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:58517">ncbigene:58517</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:80314">ncbigene:80314</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:51780">ncbigene:51780</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:10987">ncbigene:10987</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:1314">ncbigene:1314</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:989">ncbigene:989</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:976">ncbigene:976</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:5204">ncbigene:5204</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:23326">ncbigene:23326</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:9477">ncbigene:9477</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:2806">ncbigene:2806</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:84899">ncbigene:84899</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:2868">ncbigene:2868</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:1059">ncbigene:1059</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:8195">ncbigene:8195</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:8021">ncbigene:8021</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:7979">ncbigene:7979</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:2770">ncbigene:2770</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:84705">ncbigene:84705</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:8666">ncbigene:8666</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:85313">ncbigene:85313</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:9584">ncbigene:9584</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:1327">ncbigene:1327</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:10328">ncbigene:10328</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:5565">ncbigene:5565</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:22907">ncbigene:22907</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:23378">ncbigene:23378</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:3021">ncbigene:3021</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:1984">ncbigene:1984</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:51388">ncbigene:51388</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:842">ncbigene:842</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:116988">ncbigene:116988</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:55237">ncbigene:55237</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:4677">ncbigene:4677</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:26519">ncbigene:26519</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:5025">ncbigene:5025</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:60561">ncbigene:60561</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:6885">ncbigene:6885</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:3658">ncbigene:3658</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:7094">ncbigene:7094</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:10817">ncbigene:10817</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:9656">ncbigene:9656</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:60492">ncbigene:60492</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:54810">ncbigene:54810</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:10219">ncbigene:10219</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:8562">ncbigene:8562</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:1543">ncbigene:1543</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:7409">ncbigene:7409</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:126208">ncbigene:126208</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:6205">ncbigene:6205</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:23421">ncbigene:23421</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:6202">ncbigene:6202</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:26092">ncbigene:26092</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:113419">ncbigene:113419</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:6189">ncbigene:6189</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:55023">ncbigene:55023</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:84928">ncbigene:84928</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:64434">ncbigene:64434</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:6134">ncbigene:6134</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:11160">ncbigene:11160</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:51125">ncbigene:51125</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:6837">ncbigene:6837</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:9328">ncbigene:9328</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:90678">ncbigene:90678</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:6749">ncbigene:6749</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:92105">ncbigene:92105</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:129787">ncbigene:129787</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:120534">ncbigene:120534</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:147339">ncbigene:147339</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:10618">ncbigene:10618</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:55676">ncbigene:55676</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:9989">ncbigene:9989</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:9337">ncbigene:9337</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:286148">ncbigene:286148</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:255027">ncbigene:255027</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:9753">ncbigene:9753</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:118424">ncbigene:118424</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:11077">ncbigene:11077</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:23076">ncbigene:23076</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:5635">ncbigene:5635</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:79707">ncbigene:79707</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:84328">ncbigene:84328</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:8880">ncbigene:8880</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:11080">ncbigene:11080</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:113802">ncbigene:113802</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:23385">ncbigene:23385</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:64216">ncbigene:64216</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:163882">ncbigene:163882</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:80128">ncbigene:80128</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:200185">ncbigene:200185</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:100507246">ncbigene:100507246</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:9861">ncbigene:9861</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:5001">ncbigene:5001</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:138050">ncbigene:138050</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:221150">ncbigene:221150</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:55662">ncbigene:55662</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:57567">ncbigene:57567</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:7753">ncbigene:7753</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:3611">ncbigene:3611</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:5896">ncbigene:5896</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:374868">ncbigene:374868</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:6157">ncbigene:6157</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:51755">ncbigene:51755</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:7571">ncbigene:7571</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:8000">ncbigene:8000</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:1938">ncbigene:1938</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:80700">ncbigene:80700</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:113655">ncbigene:113655</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:54442">ncbigene:54442</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:3516">ncbigene:3516</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:29063">ncbigene:29063</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:7266">ncbigene:7266</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:4735">ncbigene:4735</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:11273">ncbigene:11273</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:661">ncbigene:661</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:2339">ncbigene:2339</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:79155">ncbigene:79155</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:65110">ncbigene:65110</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:7584">ncbigene:7584</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:26145">ncbigene:26145</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:3308">ncbigene:3308</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:51499">ncbigene:51499</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:6201">ncbigene:6201</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:54971">ncbigene:54971</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:6670">ncbigene:6670</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:78988">ncbigene:78988</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:286042">ncbigene:286042</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:64802">ncbigene:64802</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:1267">ncbigene:1267</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:162333">ncbigene:162333</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:10594">ncbigene:10594</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:128439">ncbigene:128439</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:55167">ncbigene:55167</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:7189">ncbigene:7189</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:10106">ncbigene:10106</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:100128782">ncbigene:100128782</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:54998">ncbigene:54998</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:8636">ncbigene:8636</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:29882">ncbigene:29882</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:222183">ncbigene:222183</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:25970">ncbigene:25970</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:7284">ncbigene:7284</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:22827">ncbigene:22827</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:197407">ncbigene:197407</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:1731">ncbigene:1731</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:23526">ncbigene:23526</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:55432">ncbigene:55432</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:6635">ncbigene:6635</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:9798">ncbigene:9798</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:375748">ncbigene:375748</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:124637">ncbigene:124637</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:6304">ncbigene:6304</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:84316">ncbigene:84316</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:10946">ncbigene:10946</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:84851">ncbigene:84851</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:71">ncbigene:71</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:353274">ncbigene:353274</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:157567">ncbigene:157567</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:10623">ncbigene:10623</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:50626">ncbigene:50626</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:58500">ncbigene:58500</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:7633">ncbigene:7633</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:5478">ncbigene:5478</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:23660">ncbigene:23660</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:643836">ncbigene:643836</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:388796">ncbigene:388796</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:54554">ncbigene:54554</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:57541">ncbigene:57541</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:221785">ncbigene:221785</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:5094">ncbigene:5094</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:6168">ncbigene:6168</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:6277">ncbigene:6277</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:6136">ncbigene:6136</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:85028">ncbigene:85028</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:90987">ncbigene:90987</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:51441">ncbigene:51441</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:10920">ncbigene:10920</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:107075270">ncbigene:107075270</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:4736">ncbigene:4736</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:85457">ncbigene:85457</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:692227">ncbigene:692227</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:399818">ncbigene:399818</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:84455">ncbigene:84455</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:80862">ncbigene:80862</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:407037">ncbigene:407037</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:84342">ncbigene:84342</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:51024">ncbigene:51024</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:731275">ncbigene:731275</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:342371">ncbigene:342371</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:348262">ncbigene:348262</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:122152364">ncbigene:122152364</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:122152330">ncbigene:122152330</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:157489">ncbigene:157489</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:101928545">ncbigene:101928545</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:102031319">ncbigene:102031319</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:100507554">ncbigene:100507554</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:284649">ncbigene:284649</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:8629">ncbigene:8629</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:254128">ncbigene:254128</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:91368">ncbigene:91368</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:9907">ncbigene:9907</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:100316868">ncbigene:100316868</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:147007">ncbigene:147007</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:100507602">ncbigene:100507602</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:2738">ncbigene:2738</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:105375847">ncbigene:105375847</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:120883614">ncbigene:120883614</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:283459">ncbigene:283459</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:90799">ncbigene:90799</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:100505915">ncbigene:100505915</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:79585">ncbigene:79585</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:101927323">ncbigene:101927323</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:119139900">ncbigene:119139900</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:26811">ncbigene:26811</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:27246">ncbigene:27246</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:105376843">ncbigene:105376843</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:105372483">ncbigene:105372483</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:100093630">ncbigene:100093630</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:107985885">ncbigene:107985885</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:118568811">ncbigene:118568811</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:102723582">ncbigene:102723582</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:400027">ncbigene:400027</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:692073">ncbigene:692073</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:57223">ncbigene:57223</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:114791">ncbigene:114791</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:677809">ncbigene:677809</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:677842">ncbigene:677842</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:677766">ncbigene:677766</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:730668">ncbigene:730668</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:11215">ncbigene:11215</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:60">ncbigene:60</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:23394">ncbigene:23394</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:55257">ncbigene:55257</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:79650">ncbigene:79650</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:3216">ncbigene:3216</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:1822">ncbigene:1822</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:57862">ncbigene:57862</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:3215">ncbigene:3215</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:9873">ncbigene:9873</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:56929">ncbigene:56929</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:90933">ncbigene:90933</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:6130">ncbigene:6130</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:9903">ncbigene:9903</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:23160">ncbigene:23160</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:195828">ncbigene:195828</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:90990">ncbigene:90990</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:80835">ncbigene:80835</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:54621">ncbigene:54621</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:387893">ncbigene:387893</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:94161">ncbigene:94161</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:55219">ncbigene:55219</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:100873421">ncbigene:100873421</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:100507057">ncbigene:100507057</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:105376388">ncbigene:105376388</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:26795">ncbigene:26795</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:106479017">ncbigene:106479017</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:100616342">ncbigene:100616342</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:100500828">ncbigene:100500828</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:80022">ncbigene:80022</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:677825">ncbigene:677825</a></li>
+                                <li><a href="https://bioregistry.io/ncbigene:102466201">ncbigene:102466201</a></li>
+                        </ol>
+                    </dt>
             </dl>
-
-
             <span class="badge badge-warning">Term generation via PyOBO is currently under construction</span>
             <blockquote>
                 Term(reference=Reference(prefix=&#39;msigdb&#39;, identifier=&#39;M34465&#39;, name=&#39;NPM1_TARGET_GENES&#39;), definition=&#39;Genes containing one or more binding sites for UniProt:P06748 (NPM1) in their promoter regions (TSS -1000,+100 bp) as identified by GTRD version 20.06 ChIP-seq harmonization.&#39;, provenance=[Reference(prefix=&#39;pubmed&#39;, identifier=&#39;33231677&#39;, name=None)], relationships=defaultdict(&lt;class &#39;list&#39;&gt;, {TypeDef(reference=Reference(prefix=&#39;RO&#39;, identifier=&#39;0002162&#39;, name=&#39;in taxon&#39;), comment=None, namespace=None, definition=None, is_transitive=None, is_symmetric=None, domain=None, range=None, parents=[], xrefs=[], inverse=None, holds_over_chain=None): [Reference(prefix=&#39;NCBITaxon&#39;, identifier=&#39;9606&#39;, name=&#39;Homo sapiens&#39;)], TypeDef(reference=Reference(prefix=&#39;BFO&#39;, identifier=&#39;0000051&#39;, name=&#39;has part&#39;), comment=&#39;Inverse of part_of&#39;, namespace=None, definition=None, is_transitive=None, is_symmetric=None, domain=None, range=None, parents=[], xrefs=[], inverse=Reference(prefix=&#39;BFO&#39;, identifier=&#39;0000050&#39;, name=&#39;part of&#39;), holds_over_chain=None): [Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;57147&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;4074&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;26073&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;23028&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;23077&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;3475&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;29116&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;6224&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;2067&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;9519&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;54480&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;26009&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;23338&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;10721&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;4659&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;56848&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;6141&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;4904&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;30834&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;80347&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;4205&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;57560&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;9948&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;6929&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;4775&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;54475&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;23332&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;55421&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;54962&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;9138&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;3205&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;5108&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;9984&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;57092&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;11266&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;55100&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;54700&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;4528&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;10075&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;8602&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;51290&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;23186&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;51650&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;51726&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;10013&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;3189&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;4713&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;26088&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;56993&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;1983&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;11083&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;994&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;3420&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;2010&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;23361&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;80152&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;8312&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;64428&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;10273&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;9093&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;79848&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;7264&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;203069&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;665&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;11100&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;6223&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;6320&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;30000&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;64598&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;55744&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;10488&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;79004&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;23232&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;26001&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;8402&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;10743&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;1655&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;81539&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;1432&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;705&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;1347&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;5810&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;55299&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;9631&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;10051&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;55171&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;6787&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;3069&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;7341&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;23341&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;27101&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;9887&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;23169&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;6738&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;51377&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;54936&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;23271&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;23314&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;56252&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;5826&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;58517&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;80314&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;51780&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;10987&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;1314&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;989&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;976&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;5204&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;23326&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;9477&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;2806&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;84899&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;2868&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;1059&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;8195&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;8021&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;7979&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;2770&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;84705&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;8666&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;85313&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;9584&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;1327&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;10328&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;5565&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;22907&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;23378&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;3021&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;1984&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;51388&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;842&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;116988&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;55237&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;4677&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;26519&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;5025&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;60561&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;6885&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;3658&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;7094&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;10817&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;9656&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;60492&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;54810&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;10219&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;8562&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;1543&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;7409&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;126208&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;6205&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;23421&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;6202&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;26092&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;113419&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;6189&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;55023&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;84928&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;64434&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;6134&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;11160&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;51125&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;6837&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;9328&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;90678&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;6749&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;92105&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;129787&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;120534&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;147339&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;10618&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;55676&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;9989&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;9337&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;286148&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;255027&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;9753&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;118424&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;11077&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;23076&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;5635&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;79707&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;84328&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;8880&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;11080&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;113802&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;23385&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;64216&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;163882&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;80128&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;200185&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;100507246&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;9861&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;5001&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;138050&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;221150&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;55662&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;57567&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;7753&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;3611&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;5896&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;374868&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;6157&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;51755&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;7571&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;8000&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;1938&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;80700&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;113655&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;54442&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;3516&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;29063&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;7266&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;4735&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;11273&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;661&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;2339&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;79155&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;65110&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;7584&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;26145&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;3308&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;51499&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;6201&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;54971&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;6670&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;78988&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;286042&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;64802&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;1267&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;162333&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;10594&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;128439&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;55167&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;7189&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;10106&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;100128782&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;54998&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;8636&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;29882&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;222183&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;25970&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;7284&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;22827&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;197407&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;1731&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;23526&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;55432&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;6635&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;9798&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;375748&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;124637&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;6304&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;84316&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;10946&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;84851&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;71&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;353274&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;157567&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;10623&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;50626&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;58500&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;7633&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;5478&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;23660&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;643836&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;388796&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;54554&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;57541&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;221785&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;5094&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;6168&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;6277&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;6136&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;85028&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;90987&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;51441&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;10920&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;107075270&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;4736&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;85457&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;692227&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;399818&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;84455&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;80862&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;407037&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;84342&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;51024&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;731275&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;342371&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;348262&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;122152364&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;122152330&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;157489&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;101928545&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;102031319&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;100507554&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;284649&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;8629&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;254128&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;91368&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;9907&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;100316868&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;147007&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;100507602&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;2738&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;105375847&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;120883614&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;283459&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;90799&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;100505915&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;79585&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;101927323&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;119139900&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;26811&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;27246&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;105376843&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;105372483&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;100093630&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;107985885&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;118568811&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;102723582&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;400027&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;692073&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;57223&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;114791&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;677809&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;677842&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;677766&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;730668&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;11215&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;60&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;23394&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;55257&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;79650&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;3216&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;1822&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;57862&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;3215&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;9873&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;56929&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;90933&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;6130&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;9903&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;23160&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;195828&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;90990&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;80835&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;54621&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;387893&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;94161&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;55219&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;100873421&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;100507057&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;105376388&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;26795&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;106479017&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;100616342&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;100500828&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;80022&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;677825&#39;, name=None), Reference(prefix=&#39;ncbigene&#39;, identifier=&#39;102466201&#39;, name=None)]}), properties=defaultdict(&lt;class &#39;list&#39;&gt;, {&#39;category_code&#39;: [&#39;C3&#39;], &#39;sub_category_code&#39;: [&#39;TFT:GTRD&#39;], &#39;contributor&#39;: [&#39;Anthony Castanza&#39;], &#39;exact_source&#39;: [&#39;P06748&#39;], &#39;external_details_url&#39;: [&#39;http://gtrd.biouml.org/&#39;]}), parents=[], synonyms=[], xrefs=[], alt_ids=[], namespace=None, is_obsolete=False)
             </blockquote>
         </div>
-    </div>
-    </div>
-
+    </div></div>
 
 <footer class="footer">
     <p class="small text-center text-muted">
@@ -91,29 +439,10 @@
     </p>
 </footer>
 
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
-
-    <!-- DataTables, see: https://datatables.net/examples/styling/bootstrap4.html-->
-    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.12/c3.min.js"></script>
-
-    <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>
-</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script></body>
 </html>
