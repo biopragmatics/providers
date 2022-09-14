@@ -3,23 +3,35 @@
 from pathlib import Path
 
 import bioregistry
+import click
+import pyobo
 from pyobo import Obo
 from pyobo.sources import ontology_resolver
 from pyobo.ssg import make_site
-import click
 from tqdm.contrib.logging import logging_redirect_tqdm
-
+from tqdm import tqdm
 HERE = Path(__file__).parent.resolve()
 REPOSITORY_NAME = "providers"
+SKIP = {"gexo"}
 
 @click.command()
 def main():
     """Generate static sites for resources with none."""
     ontologies = []
     with logging_redirect_tqdm():
+        for resource in bioregistry.resources():
+            uri_format = resource.get_uri_format()
+            obo_download = resource.get_download_obo()
+            if uri_format is None and obo_download is not None and resource.prefix not in SKIP:
+                tqdm(f"getting {resource.prefix} from {obo_download}")
+                obo = pyobo.get_ontology(resource.prefix)
+                make_site(obo, HERE.joinpath(obo.ontology))
+                ontologies.append(obo)
+
         for cls in ontology_resolver:
             uri_format = bioregistry.get_uri_format(cls.ontology)
             if uri_format is None or "biopragmatics.github.io" in uri_format:
+                tqdm(f"getting {cls.ontology} from PyOBO reader")
                 obo: Obo = cls()
                 make_site(obo, HERE.joinpath(obo.ontology))
                 ontologies.append(obo)
@@ -28,7 +40,8 @@ def main():
         f"- [{bioregistry.get_name(obo.ontology)} (`{obo.ontology}`)]({obo.ontology})"
         for obo in ontologies
     )
-    HERE.joinpath("README.md").write_text(f"""\
+    HERE.joinpath("README.md").write_text(
+        f"""\
 # Biopragmatics Sites
 
 This repository contains static sites generated for resources
@@ -44,8 +57,9 @@ The sites can be updated with the following:
 $ pip install tox
 $ tox
 ```
-""")
+"""
+    )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
