@@ -5,31 +5,43 @@ from pathlib import Path
 import bioregistry
 import click
 import pyobo
+from bioregistry import manager
 from pyobo import Obo
 from pyobo.sources import ontology_resolver
 from pyobo.ssg import make_site
-from tqdm.contrib.logging import logging_redirect_tqdm
 from tqdm import tqdm
+from tqdm.contrib.logging import logging_redirect_tqdm
+
 HERE = Path(__file__).parent.resolve()
+BASE_URL = "https://biopragmatics.github.io/providers"
 REPOSITORY_NAME = "providers"
 SKIP = {"gexo", "reto", "rexo"}
+
 
 @click.command()
 def main():
     """Generate static sites for resources with none."""
     ontologies = []
     with logging_redirect_tqdm():
-        for resource in bioregistry.resources():
-            uri_format = resource.get_uri_format()
+        for resource in manager.registry.values():
+            if resource.prefix in SKIP:
+                continue
             obo_download = resource.get_download_obo()
-            if uri_format is None and obo_download is not None and resource.prefix not in SKIP:
+            if obo_download is None:
+                continue
+            uri_format = resource.get_uri_format()
+            if uri_format is None or uri_format.startswith(BASE_URL):
                 obo = pyobo.get_ontology(resource.prefix)
                 make_site(obo, HERE.joinpath(obo.ontology))
                 ontologies.append(obo)
+                if resource.uri_format is None:
+                    resource.uri_format = f"{BASE_URL}/{resource.prefix}/$1"
 
         for cls in ontology_resolver:
-            uri_format = bioregistry.get_uri_format(cls.ontology)
-            if uri_format is None or "biopragmatics.github.io" in uri_format:
+            resource = bioregistry.get_resource(cls.ontology)
+            assert resource is not None
+            uri_format = resource.get_uri_format()
+            if uri_format is None or uri_format.startswith(BASE_URL):
                 try:
                     obo: Obo = cls()
                 except ValueError as e:
@@ -37,10 +49,14 @@ def main():
                     continue
                 make_site(obo, HERE.joinpath(obo.ontology))
                 ontologies.append(obo)
+                if resource.uri_format is None:
+                    resource.uri_format = f"{BASE_URL}/{resource.prefix}/$1"
+
+    manager.write_registry()
 
     link_list = "\n".join(
         f"- [{bioregistry.get_name(obo.ontology)} (`{obo.ontology}`)]({obo.ontology})"
-        for obo in ontologies
+        for obo in sorted(ontologies, key=lambda o: o.ontology)
     )
     HERE.joinpath("README.md").write_text(
         f"""\

@@ -14,11 +14,11 @@ that do not have their own providers, but are implemented in PyOBO.
 - [Mouse Brain Atlas (`mba`)](mba)
 - [Primate Brain Atlas (`pba`)](pba)
 - [PSI Extended File Format (`peff`)](peff)
-- [Selventa Families (`sfam`)](sfam)
 - [Selventa Chemicals (`schem`)](schem)
-- [Selventa Diseases (`sdis`)](sdis)
-- [UniProt Post-Translational Modification (`uniprot.ptm`)](uniprot.ptm)
 - [Selventa Complexes (`scomp`)](scomp)
+- [Selventa Diseases (`sdis`)](sdis)
+- [Selventa Families (`sfam`)](sfam)
+- [UniProt Post-Translational Modification (`uniprot.ptm`)](uniprot.ptm)
 
 ## Update
 
