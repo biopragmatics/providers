@@ -12,7 +12,7 @@ from tqdm.contrib.logging import logging_redirect_tqdm
 from tqdm import tqdm
 HERE = Path(__file__).parent.resolve()
 REPOSITORY_NAME = "providers"
-SKIP = {"gexo"}
+SKIP = {"gexo", "reto", "rexo"}
 
 @click.command()
 def main():
@@ -23,7 +23,6 @@ def main():
             uri_format = resource.get_uri_format()
             obo_download = resource.get_download_obo()
             if uri_format is None and obo_download is not None and resource.prefix not in SKIP:
-                tqdm(f"getting {resource.prefix} from {obo_download}")
                 obo = pyobo.get_ontology(resource.prefix)
                 make_site(obo, HERE.joinpath(obo.ontology))
                 ontologies.append(obo)
@@ -31,8 +30,11 @@ def main():
         for cls in ontology_resolver:
             uri_format = bioregistry.get_uri_format(cls.ontology)
             if uri_format is None or "biopragmatics.github.io" in uri_format:
-                tqdm(f"getting {cls.ontology} from PyOBO reader")
-                obo: Obo = cls()
+                try:
+                    obo: Obo = cls()
+                except ValueError as e:
+                    tqdm.write(f"failed to get {cls.ontology}: {e}")
+                    continue
                 make_site(obo, HERE.joinpath(obo.ontology))
                 ontologies.append(obo)
 
