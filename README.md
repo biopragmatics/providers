@@ -8,6 +8,7 @@ that do not have their own providers, but are implemented in PyOBO.
 - [Developing Human Brain Atlas (`dhba`)](dhba)
 - [Disease Class (`diseaseclass`)](diseaseclass)
 - [Developing Mouse Brain Atlas (`dmba`)](dmba)
+- [GO Chemicals (`goche`)](goche)
 - [Human Brain Atlas (`hba`)](hba)
 - [Homologous Organ Groups (`hog`)](hog)
 - [Ion Channel Electrophysiology Ontology (`icepo`)](icepo)
