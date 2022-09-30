@@ -26,16 +26,27 @@ def main():
         for resource in manager.registry.values():
             if resource.prefix in SKIP:
                 continue
-            obo_download = resource.get_download_obo()
-            if obo_download is None:
-                continue
-            uri_format = resource.get_uri_format()
-            if uri_format is None or uri_format.startswith(BASE_URL):
-                obo = pyobo.get_ontology(resource.prefix)
-                make_site(obo, HERE.joinpath(obo.ontology))
-                ontologies.append(obo)
-                if resource.uri_format is None:
-                    resource.uri_format = f"{BASE_URL}/{resource.prefix}/$1"
+
+            downloads = [
+                ("obo", resource.get_download_obo()),
+                ("owl", resource.get_download_owl()),
+            ]
+            for download_format, download in downloads:
+                # there's a ton of junk in aber-owl
+                if download is None or "aber-owl" in download:
+                    continue
+                uri_format = resource.get_uri_format()
+                if uri_format is None or uri_format.startswith(BASE_URL):
+                    try:
+                        obo = pyobo.get_ontology(resource.prefix)
+                        make_site(obo, HERE.joinpath(obo.ontology))
+                        ontologies.append(obo)
+                        if resource.uri_format is None and resource.prefix:
+                            resource.uri_format = f"{BASE_URL}/{resource.prefix}/$1"
+                    except Exception as e:
+                        tqdm.write(f"failed on {resource.prefix}: {e}")
+                        continue
+                    break
 
         for cls in ontology_resolver:
             resource = bioregistry.get_resource(cls.ontology)
