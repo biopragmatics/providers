@@ -20,6 +20,7 @@ that do not have their own providers, but are implemented in PyOBO.
 - [Selventa Diseases (`sdis`)](sdis)
 - [Selventa Families (`sfam`)](sfam)
 - [UniProt Post-Translational Modification (`uniprot.ptm`)](uniprot.ptm)
+- [The COVID-19 epidemiology and monitoring ontology (`cemo`)](cemo)
 
 ## Update
 
