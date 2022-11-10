@@ -18,6 +18,7 @@ HERE = Path(__file__).parent.resolve()
 BASE_URL = "https://biopragmatics.github.io/providers"
 REPOSITORY_NAME = "providers"
 SKIP = {"gexo", "reto", "rexo"}
+SHOW_MANIFEST = {"cemo"}
 
 
 @click.command()
@@ -49,7 +50,9 @@ def main(extra: List[str]):
                 ):
                     try:
                         obo = pyobo.get_ontology(resource.prefix)
-                        make_site(obo, HERE.joinpath(obo.ontology))
+                        make_site(
+                            obo, HERE.joinpath(obo.ontology), manifest=obo.ontology in SHOW_MANIFEST
+                        )
                         ontologies.append(obo)
                         if resource.uri_format is None and resource.prefix:
                             resource.uri_format = f"{BASE_URL}/{resource.prefix}/$1"
