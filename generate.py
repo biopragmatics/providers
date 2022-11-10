@@ -1,11 +1,13 @@
 """Generate static sites for resources with none."""
 
 from pathlib import Path
+from typing import List
 
 import bioregistry
 import click
 import pyobo
 from bioregistry import manager
+from more_click import verbose_option
 from pyobo import Obo
 from pyobo.sources import ontology_resolver
 from pyobo.ssg import make_site
@@ -19,12 +21,16 @@ SKIP = {"gexo", "reto", "rexo"}
 
 
 @click.command()
-def main():
+@click.option("--extra", multiple=True)
+@verbose_option
+def main(extra: List[str]):
     """Generate static sites for resources with none."""
     ontologies = []
     with logging_redirect_tqdm():
         for resource in manager.registry.values():
             if resource.prefix in SKIP:
+                continue
+            if extra and resource.prefix not in extra:
                 continue
 
             downloads = [
@@ -36,7 +42,11 @@ def main():
                 if download is None or "aber-owl" in download:
                     continue
                 uri_format = resource.get_uri_format()
-                if uri_format is None or uri_format.startswith(BASE_URL):
+                if (
+                    uri_format is None
+                    or uri_format.startswith(BASE_URL)
+                    or resource.prefix in extra
+                ):
                     try:
                         obo = pyobo.get_ontology(resource.prefix)
                         make_site(obo, HERE.joinpath(obo.ontology))
@@ -49,6 +59,9 @@ def main():
                     break
 
         for cls in ontology_resolver:
+            if extra and cls.ontology not in extra:
+                continue
+
             resource = bioregistry.get_resource(cls.ontology)
             assert resource is not None
             uri_format = resource.get_uri_format()
