@@ -22,7 +22,7 @@ SHOW_MANIFEST = {"cemo"}
 
 
 @click.command()
-@click.option("--extra", multiple=True)
+@click.option("--extra", multiple=True, help="Use this if you want to just build one or a few resources")
 @verbose_option
 def main(extra: List[str]):
     """Generate static sites for resources with none."""

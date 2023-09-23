@@ -21,6 +21,7 @@ that do not have their own providers, but are implemented in PyOBO.
 - [Selventa Families (`sfam`)](sfam)
 - [UniProt Post-Translational Modification (`uniprot.ptm`)](uniprot.ptm)
 - [The COVID-19 epidemiology and monitoring ontology (`cemo`)](cemo)
+- [Vaccine administered code set (`cvx`)](cvx)
 
 ## Update
 
